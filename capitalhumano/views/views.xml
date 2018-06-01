@@ -1,0 +1,56 @@
+<odoo>
+    <!-- explicit list view definition -->
+    <!--
+    <record model="ir.ui.view" id="capitalhumano.list">
+      <field name="name">capitalhumano list</field>
+      <field name="model">capitalhumano.capitalhumano</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+    -->
+
+    <!-- actions opening views on models -->
+	<record model="ir.actions.act_window" id="colaboradores_list_action">
+		<field name="name">Colaboradores</field>
+		<field name="res_model">capitalhumano.colaboradores</field>
+		<field name="view_mode">tree,form</field>
+		<field name="help" type="html">
+			<p class="oe_view_nocontent_create">Crea el primer colaborador</p>
+		</field>
+	</record>
+
+    <!-- server action to the one above -->
+    <!--
+    <record model="ir.actions.server" id="capitalhumano.action_server">
+      <field name="name">capitalhumano server</field>
+      <field name="model_id" ref="model_capitalhumano_capitalhumano"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": self._name,
+        }
+      </field>
+    </record>
+    -->
+
+    <!-- Top menu item -->
+	<menuitem name="Capital Humano" id="main_capitalhumano_menu"/>
+    <!-- menu categories -->
+	<menuitem name="Capital Humano" id="capitalhumano_menu" parent="main_capitalhumano_menu"/>
+	<menuitem name="Colaboradores" id="colaboradores_menu" parent="capitalhumano_menu" action="colaboradores_list_action"/>
+   
+    <!-- actions -->
+    <!--
+    <menuitem name="List" id="capitalhumano.menu_1_list" parent="capitalhumano.menu_1"
+              action="capitalhumano.action_window"/>
+    <menuitem name="Server to list" id="capitalhumano" parent="capitalhumano.menu_2"
+              action="capitalhumano.action_server"/>
+    -->
+</odoo>
