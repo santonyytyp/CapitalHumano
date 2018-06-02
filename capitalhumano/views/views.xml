@@ -41,6 +41,7 @@
     -->
 
     <!-- Top menu item -->
+    <!-- Top menu item2 -->
 	<menuitem name="Capital Humano" id="main_capitalhumano_menu"/>
     <!-- menu categories -->
 	<menuitem name="Capital Humano" id="capitalhumano_menu" parent="main_capitalhumano_menu"/>
