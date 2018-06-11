@@ -1,5 +1,144 @@
 <odoo>
     <!-- explicit list view definition -->
+	<record model="ir.ui.view" id="colaboradores_form_view">
+		<field name="name">colaboradores.form</field>
+		<field name="model">capitalhumano.colaboradores</field>
+		<field name="arch" type="xml">
+			<form string="Colaboradores Form">
+				<sheet>
+					<span>
+						<field name="imagen" widget="image" class="oe_avatar"/>							
+						<h1><field name="name"/></h1>
+					</span>
+					<group>
+						<group>
+							<field name="correo" widget="email"/>
+							<field name="telefono"/>
+							<field name="skype"/>
+						</group>
+					</group>
+					<notebook>
+						<page string="Informacion publica">
+							<group>
+								<group string="Informacion de contacto">
+									<field name="dirTrab" string="Direccion de trabajo"/>
+									<field name="celTrab" string="Movil de trabajo"/>
+									<field name="dirOfi" string="Direccion de oficina"/>
+									<field name="compania" string="Compania"/>
+									<field name="usuarioerp" string="Usuario ERP"/>
+								</group>
+								<group string="Cargo">
+									<field name="departamento" string="Departamento"/>
+									<field name="tituloTrab" string="Titulo del trabajo"/>
+									<field name="jefeInmediato" string="Jefe inmediato"/>
+									<field name="director" string="Director"/>
+									<field name="esDirector" string="Es director"/>
+								</group>
+							</group>
+						</page>
+						<page string="Informacion Personal">
+							<group>
+                                                                <group string="Ciudadania e informacion adicional">
+                                                                        <field name="nacionalidad" string="Nacionalidad"/>
+                                                                        <field name="nIdentificacion" string="No. de identificacion"/>
+                                                                        <field name="nPasaporte" string="No. de pasaporte"/>
+                                                                        <field name="nCuentabancaria" string="No. de cuenta bancaria"/>
+                                                                        <field name="otroID" string="Otro ID"/>
+                                                                </group>
+                                                                <group string="Informacion de contacto">
+                                                                        <field name="direccion" string="Direccion particular"/>
+                                                                </group>
+                                                        </group>
+							<group>
+                                                                <group string="Estado">
+                                                                        <field name="sexo" string="Sexo"/>
+                                                                        <field name="estadoCivil" string="Estado civil"/>
+                                                                        <field name="nHijos" string="No. de Hijos"/>
+                                                                </group>
+                                                                <group string="Nacimiento">
+                                                                        <field name="fechaNac" string="Fecha de nacimiento"/>
+                                                                        <field name="lugarNac" string="Lugar de nacimiento"/>
+                                                                        <field name="edad" string="Edad"/>
+                                                                </group>
+                                                        </group>
+						</page>
+						<page string="Expediente">
+                                                        <group>
+                                                                <group string="Expediente">
+                                                                        <field name="curp" string="CURP"/>
+                                                                        <field name="nEmpleado" string="No. de empleado"/>
+                                                                        <field name="nss" string="No. de seguro social"/>
+                                                                        <field name="gradoEstudios" string="Ultimo grado de estudio"/>
+                                                                        <field name="tipoSangre" string="Tipo de sangre"/>
+                                                                        <field name="infonavit" string="Credito Infonavit"/>
+                                                                </group>
+                                                                <group string="Baja">
+                                                                        <field name="fechaIngreso" string="Fecha de ingreso"/>
+                                                                        <field name="fechaBaja" string="Fecha de baja"/>
+                                                                        <field name="motivoBaja" string="Motivo de baja"/>
+                                                                </group>
+                                                        </group>
+							<group string="Documentos">
+								<field name="dcv" string="Curriculum vitae" type="checkbox"/>
+								<field name="dine" string="Copia INE" type="checkbox"/>
+								<field name="dan" string="Copia de acta de nacimiento" type="checkbox"/>
+								<field name="dnss" string="Registro de numero de seguro social" type="checkbox"/>
+								<field name="dcurp" string="CURP" type="checkbox"/>
+								<field name="ddomi" string="Comprobante de domicilio" type="checkbox"/>
+								<field name="dar" string="Aviso de retencion" type="checkbox"/>
+								<field name="drfc" string="Alta RFC" type="checkbox"/>
+								<field name="dcl" string="Constancia laboral" type="checkbox"/>
+								<field name="drp" string="Recomendacion personal" type="checkbox"/>
+								<field name="dcnap" string="Carta de no antecedentes penales" type="checkbox"/>
+								<field name="dlc" string="Licencia de conducir" type="checkbox"/>
+								<field name="d2fti" string="2 fotografias tamano infantil" type="checkbox"/>
+								<field name="dcuge" string="Constancia de ultimo grado de estudios" type="checkbox"/>
+								<field name="dstyp" string="Solicitud TyP Refrigeracion" type="checkbox"/>
+								<field name="dpsi" string="Psicometria" type="checkbox"/>
+								<field name="drl" string="Referencias laborales" type="checkbox"/>
+								<field name="dcp" string="Contrato a prueba" type="checkbox"/>
+								<field name="dci" string="Contrato indeterminado" type="checkbox"/>
+								<field name="dcc" string="Convenio de confidencialidad" type="checkbox"/>
+								<field name="dap" string="Aviso de privacidad" type="checkbox"/>
+								<field name="dimss" string="Constancia de alta ante IMSS" type="checkbox"/>
+								<field name="dsv" string="Seguro de vida" type="checkbox"/>
+								<field name="drit" string="Reglamento interior de trabajo" type="checkbox"/>
+								<field name="dem" string="Examenes medicos" type="checkbox"/>
+							</group>
+						</page>
+						<page string="Configuracion RRHH">
+                                                        <group>
+                                                                <group string="Ausencias">
+                                                                        <field name="auResPer" string="Ausencias permitidas restantes"/>
+                                                                </group>
+                                                                <group string="Contrato">
+                                                                        <field name="examenMedico" string="Examen medico"/>
+                                                                        <field name="vehiculoCompania" string="Vehiculo de la compania"/>
+                                                                        <field name="disTarea" string="Distribucion de tarea"/>
+                                                                </group>
+                                                        </group>
+                                                        <group>
+                                                                <group string="Horas de trabajo">
+                                                                        <field name="producto" string="Producto"/>
+                                                                        <field name="diario" string="Diario analitico"/>
+                                                                </group>
+                                                                <group string="Activo">
+                                                                        <field name="activo" string="Activo"/>
+                                                                </group>
+                                                        </group>
+						</page>
+						<page string="test page">
+							<group>
+								<group>
+                                                                        <field name="activo" string="Activo"/>
+								</group>
+							</group>
+						</page>
+					</notebook>
+				</sheet>
+			</form>
+		</field>
+	</record>
     <!--
     <record model="ir.ui.view" id="capitalhumano.list">
       <field name="name">capitalhumano list</field>
@@ -24,6 +163,39 @@
 		</field>
 	</record>
 
+	<record model="ir.actions.act_window" id="departamentos_list_action">
+		<field name="name">Departamentos</field>
+		<field name="res_model">capitalhumano.departamentos</field>
+		<field name="view_mode">tree,form</field>
+		<field name="help" type="html">
+			<p class="oe_view_nocontent_create">Crea el primer departamento</p>
+		</field>
+	</record>
+
+	<record model="ir.ui.view" id="departamentos_form_view">
+		<field name="name">departamentos.form</field>
+		<field name="model">capitalhumano.departamentos</field>
+		<field name="arch" type="xml">
+			<form string="Departamento form">
+				<sheet>
+					<group>
+						<field name="name" string="Nombre"/>
+						<field name="departamentoPadre" string="Departamento padre"/>
+					</group>
+				</sheet>
+			</form>
+		</field>
+	</record>
+	<record model="ir.ui.view" id="departamentos_tree_view">
+		<field name="name">departamentos.tree</field>
+		<field name="model">capitalhumano.departamentos</field>
+		<field name="arch" type="xml">
+			<tree string="Departamento tree">
+				<field name="name" string="Nombre"/>
+				<field name="departamentoPadre" string="Departamento padre"/>
+			</tree>
+		</field>
+	</record>
     <!-- server action to the one above -->
     <!--
     <record model="ir.actions.server" id="capitalhumano.action_server">
@@ -46,6 +218,9 @@
     <!-- menu categories -->
 	<menuitem name="Capital Humano" id="capitalhumano_menu" parent="main_capitalhumano_menu"/>
 	<menuitem name="Colaboradores" id="colaboradores_menu" parent="capitalhumano_menu" action="colaboradores_list_action"/>
+
+	<menuitem name="Configuracion" id="configuracion_menu" parent="main_capitalhumano_menu"/>
+	<menuitem name="Departamentos" id="departamentos_menu" parent="configuracion_menu" action="departamentos_list_action"/>
    
     <!-- actions -->
     <!--
