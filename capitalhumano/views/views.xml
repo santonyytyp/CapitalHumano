@@ -79,31 +79,35 @@
                                                                 </group>
                                                         </group>
 							<group string="Documentos">
-								<field name="dcv" string="Curriculum vitae" type="checkbox"/>
-								<field name="dine" string="Copia INE" type="checkbox"/>
-								<field name="dan" string="Copia de acta de nacimiento" type="checkbox"/>
-								<field name="dnss" string="Registro de numero de seguro social" type="checkbox"/>
-								<field name="dcurp" string="CURP" type="checkbox"/>
-								<field name="ddomi" string="Comprobante de domicilio" type="checkbox"/>
-								<field name="dar" string="Aviso de retencion" type="checkbox"/>
-								<field name="drfc" string="Alta RFC" type="checkbox"/>
-								<field name="dcl" string="Constancia laboral" type="checkbox"/>
-								<field name="drp" string="Recomendacion personal" type="checkbox"/>
-								<field name="dcnap" string="Carta de no antecedentes penales" type="checkbox"/>
-								<field name="dlc" string="Licencia de conducir" type="checkbox"/>
-								<field name="d2fti" string="2 fotografias tamano infantil" type="checkbox"/>
-								<field name="dcuge" string="Constancia de ultimo grado de estudios" type="checkbox"/>
-								<field name="dstyp" string="Solicitud TyP Refrigeracion" type="checkbox"/>
-								<field name="dpsi" string="Psicometria" type="checkbox"/>
-								<field name="drl" string="Referencias laborales" type="checkbox"/>
-								<field name="dcp" string="Contrato a prueba" type="checkbox"/>
-								<field name="dci" string="Contrato indeterminado" type="checkbox"/>
-								<field name="dcc" string="Convenio de confidencialidad" type="checkbox"/>
-								<field name="dap" string="Aviso de privacidad" type="checkbox"/>
-								<field name="dimss" string="Constancia de alta ante IMSS" type="checkbox"/>
-								<field name="dsv" string="Seguro de vida" type="checkbox"/>
-								<field name="drit" string="Reglamento interior de trabajo" type="checkbox"/>
-								<field name="dem" string="Examenes medicos" type="checkbox"/>
+                                                                <group>
+									<field name="dcv" string="Curriculum vitae" type="checkbox"/>
+									<field name="dine" string="Copia INE" type="checkbox"/>
+									<field name="dan" string="Copia de acta de nacimiento" type="checkbox"/>
+									<field name="dnss" string="Registro de numero de seguro social" type="checkbox"/>
+									<field name="dcurp" string="CURP" type="checkbox"/>
+									<field name="ddomi" string="Comprobante de domicilio" type="checkbox"/>
+									<field name="dar" string="Aviso de retencion" type="checkbox"/>
+									<field name="drfc" string="Alta RFC" type="checkbox"/>
+									<field name="dcl" string="Constancia laboral" type="checkbox"/>
+									<field name="drp" string="Recomendacion personal" type="checkbox"/>
+									<field name="dcnap" string="Carta de no antecedentes penales" type="checkbox"/>
+									<field name="dlc" string="Licencia de conducir" type="checkbox"/>
+                                                                </group>
+                                                                <group>
+									<field name="d2fti" string="2 fotografias tamano infantil" type="checkbox"/>
+									<field name="dcuge" string="Constancia de ultimo grado de estudios" type="checkbox"/>
+									<field name="dstyp" string="Solicitud TyP Refrigeracion" type="checkbox"/>
+									<field name="dpsi" string="Psicometria" type="checkbox"/>
+									<field name="drl" string="Referencias laborales" type="checkbox"/>
+									<field name="dcp" string="Contrato a prueba" type="checkbox"/>
+									<field name="dci" string="Contrato indeterminado" type="checkbox"/>
+									<field name="dcc" string="Convenio de confidencialidad" type="checkbox"/>
+									<field name="dap" string="Aviso de privacidad" type="checkbox"/>
+									<field name="dimss" string="Constancia de alta ante IMSS" type="checkbox"/>
+									<field name="dsv" string="Seguro de vida" type="checkbox"/>
+									<field name="drit" string="Reglamento interior de trabajo" type="checkbox"/>
+									<field name="dem" string="Examenes medicos" type="checkbox"/>
+                                                                </group>
 							</group>
 						</page>
 						<page string="Configuracion RRHH">
@@ -181,6 +185,7 @@
 					<group>
 						<field name="name" string="Nombre"/>
 						<field name="departamentoPadre" string="Departamento padre"/>
+						<field name="encargado" string="Encargado"/>
 					</group>
 				</sheet>
 			</form>
@@ -193,6 +198,7 @@
 			<tree string="Departamento tree">
 				<field name="name" string="Nombre"/>
 				<field name="departamentoPadre" string="Departamento padre"/>
+				<field name="encargado" string="Encargado"/>
 			</tree>
 		</field>
 	</record>

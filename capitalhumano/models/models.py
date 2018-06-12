@@ -29,7 +29,7 @@ class Colaboradores(models.Model):
 
 	##Informacion personal##
 	#Ciudadania e info adicional
-	nacionalidad = fields.Char()
+	nacionalidad = fields.Many2one('res.country', ondelete="set null")
 	nIdentificacion = fields.Integer()
 	nPasaporte = fields.Integer()
 	nCuentabancaria = fields.Integer()
@@ -116,5 +116,6 @@ class departamento(models.Model):
 	_name = 'capitalhumano.departamentos'
 #
 	name = fields.Char(required=True)
+	encargado = fields.Many2one('capitalhumano.colaboradores', ondelete='set null')
 	descripcion = fields.Text()
 	departamentoPadre = fields.Many2one('capitalhumano.departamentos', ondelete='set null')
