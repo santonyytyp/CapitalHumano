@@ -59,6 +59,7 @@ class Colaboradores(models.Model):
 	motivoBaja = fields.Text()
 	#Beneficiarios
 	#
+	beneficiarios_ids = fields.Many2many('capitalhumano.beneficiarios', string="Beneficiarios")
 	#Referencias familiares
 	#
 	#Auxiliar
@@ -111,6 +112,14 @@ class Colaboradores(models.Model):
 #     @api.depends('value')
 #     def _value_pc(self):
 #         self.value2 = float(self.value) / 100
+
+class beneficiarios(models.Model):
+	_name = 'capitalhumano.beneficiarios'
+	name = fields.Char(string="Nombre", required=True)
+	bDireccion = fields.Char()
+	brfc = fields.Char()
+	bporcentaje = fields.Integer()
+
 
 class departamento(models.Model):
 	_name = 'capitalhumano.departamentos'
